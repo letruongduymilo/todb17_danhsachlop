@@ -20,7 +20,7 @@ jobs:
       - name: DuyleSSH
       - run: |
           mkdir -p ~/.ssh
-          echo "${{secrets.SSH_SECRECT-KEY}}" > ~/.ssh/id _rsa
+          echo "${{secrets.SSH_SECRECT_KEY}}" > ~/.ssh/id _rsa
           chmod 600 ~/.ssh/id _rsa
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa duy@34.143.236.100 sh -c 'pwd:ls-a' 
 
